@@ -8,7 +8,7 @@ class AboutScreen extends StatelessWidget {
   Future<void> _logout(BuildContext context) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('isLoggedIn', false);
-    
+
     Navigator.pushAndRemoveUntil(
       context,
       MaterialPageRoute(builder: (context) => const LoginScreen()),
@@ -36,7 +36,7 @@ class AboutScreen extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: 20),
-                
+
                 // App Icon
                 Container(
                   padding: const EdgeInsets.all(30),
@@ -122,7 +122,7 @@ class AboutScreen extends StatelessWidget {
                       const SizedBox(height: 20),
                       const Divider(),
                       const SizedBox(height: 20),
-                      
+
                       // Features
                       const Text(
                         '✨ Fitur Aplikasi:',
@@ -254,7 +254,8 @@ class AboutScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,
                     foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 40, vertical: 15),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),
